@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="/dist/main.css">
+  <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <title>Hyper Casual Game</title>
+  <style class="cp-pen-styles">
+    @font-face {
+      font-family: Muybridge;
+      src: url(https://www.axis-praxis.org/fonts/codepen/MuybridgeGX.woff2);
+    }
+
+    @keyframes Gallop {
+      from {
+        font-variation-settings: "TIME"0;
+      }
+
+      to {
+        font-variation-settings: "TIME"1000;
+      }
+    }
+
+    .horserun {
+      text-shadow: 2.5px 2.5px 1px #333;
+      font: 180px Muybridge;
+      z-index: 9999;
+      background: -webkit-linear-gradient(#eee, gray);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: 0.6s linear infinite Gallop;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="content-wrapper">
+    <div class="window">
+      <div class="tree">
+        <div class="tree__item tree__item_1">
+          <div class="tree__stamb"></div>
+          <div class="tree__branch tree__branch_1"></div>
+          <div class="tree__branch tree__branch_2"></div>
+          <div class="tree__branch tree__branch_3"></div>
+          <div class="tree__branch tree__branch_4"></div>
+        </div>
+        <div class="tree__item tree__item_2">
+          <div class="tree__stamb"></div>
+          <div class="tree__branch tree__branch_1"></div>
+          <div class="tree__branch tree__branch_2"></div>
+          <div class="tree__branch tree__branch_3"></div>
+          <div class="tree__branch tree__branch_4"></div>
+        </div>
+        <div class="tree__item tree__item_3">
+          <div class="tree__stamb"></div>
+          <div class="tree__branch tree__branch_1"></div>
+          <div class="tree__branch tree__branch_2"></div>
+          <div class="tree__branch tree__branch_3"></div>
+          <div class="tree__branch tree__branch_4"></div>
+        </div>
+        <div class="tree__item tree__item_4">
+          <div class="tree__stamb"></div>
+          <div class="tree__branch tree__branch_1"></div>
+          <div class="tree__branch tree__branch_2"></div>
+          <div class="tree__branch tree__branch_3"></div>
+          <div class="tree__branch tree__branch_4"></div>
+        </div>
+        <div class="tree__item tree__item_5">
+          <div class="tree__stamb"></div>
+          <div class="tree__branch tree__branch_1"></div>
+          <div class="tree__branch tree__branch_2"></div>
+          <div class="tree__branch tree__branch_3"></div>
+          <div class="tree__branch tree__branch_4"></div>
+        </div>
+        <div class="tree__item tree__item_6">
+          <div class="tree__stamb"></div>
+          <div class="tree__branch tree__branch_1"></div>
+          <div class="tree__branch tree__branch_2"></div>
+          <div class="tree__branch tree__branch_3"></div>
+          <div class="tree__branch tree__branch_4"></div>
+        </div>
+        <div class="tree__item tree__item_7">
+          <div class="tree__stamb"></div>
+          <div class="tree__branch tree__branch_1"></div>
+          <div class="tree__branch tree__branch_2"></div>
+          <div class="tree__branch tree__branch_3"></div>
+          <div class="tree__branch tree__branch_4"></div>
+        </div>
+        <div class="tree__item tree__item_8">
+          <div class="tree__stamb"></div>
+          <div class="tree__branch tree__branch_1"></div>
+          <div class="tree__branch tree__branch_2"></div>
+          <div class="tree__branch tree__branch_3"></div>
+          <div class="tree__branch tree__branch_4"></div>
+        </div>
+        <div class="tree__item tree__item_9">
+          <div class="tree__stamb"></div>
+          <div class="tree__branch tree__branch_1"></div>
+          <div class="tree__branch tree__branch_2"></div>
+          <div class="tree__branch tree__branch_3"></div>
+          <div class="tree__branch tree__branch_4"></div>
+        </div>
+        <div class="tree__item tree__item_10">
+          <div class="tree__stamb"></div>
+          <div class="tree__branch tree__branch_1"></div>
+          <div class="tree__branch tree__branch_2"></div>
+          <div class="tree__branch tree__branch_3"></div>
+          <div class="tree__branch tree__branch_4"></div>
+        </div>
+        <div class="tree__item tree__item_11">
+          <div class="tree__stamb"></div>
+          <div class="tree__branch tree__branch_1"></div>
+          <div class="tree__branch tree__branch_2"></div>
+          <div class="tree__branch tree__branch_3"></div>
+          <div class="tree__branch tree__branch_4"></div>
+        </div>
+        <div class="tree__item tree__item_12">
+          <div class="tree__stamb"></div>
+          <div class="tree__branch tree__branch_1"></div>
+          <div class="tree__branch tree__branch_2"></div>
+          <div class="tree__branch tree__branch_3"></div>
+          <div class="tree__branch tree__branch_4"></div>
+        </div>
+        <div class="tree__item tree__item_13">
+          <div class="tree__stamb"></div>
+          <div class="tree__branch tree__branch_1"></div>
+          <div class="tree__branch tree__branch_2"></div>
+          <div class="tree__branch tree__branch_3"></div>
+          <div class="tree__branch tree__branch_4"></div>
+        </div>
+        <div class="tree__item tree__item_14">
+          <div class="tree__stamb"></div>
+          <div class="tree__branch tree__branch_1"></div>
+          <div class="tree__branch tree__branch_2"></div>
+          <div class="tree__branch tree__branch_3"></div>
+          <div class="tree__branch tree__branch_4"></div>
+        </div>
+        <div class="tree__item tree__item_15">
+          <div class="tree__stamb"></div>
+          <div class="tree__branch tree__branch_1"></div>
+          <div class="tree__branch tree__branch_2"></div>
+          <div class="tree__branch tree__branch_3"></div>
+          <div class="tree__branch tree__branch_4"></div>
+        </div>
+        <div class="tree__item tree__item_16">
+          <div class="tree__stamb"></div>
+          <div class="tree__branch tree__branch_1"></div>
+          <div class="tree__branch tree__branch_2"></div>
+          <div class="tree__branch tree__branch_3"></div>
+          <div class="tree__branch tree__branch_4"></div>
+        </div>
+        <div class="tree__item tree__item_17">
+          <div class="tree__stamb"></div>
+          <div class="tree__branch tree__branch_1"></div>
+          <div class="tree__branch tree__branch_2"></div>
+          <div class="tree__branch tree__branch_3"></div>
+          <div class="tree__branch tree__branch_4"></div>
+        </div>
+        <div class="tree__item tree__item_18">
+          <div class="tree__stamb"></div>
+          <div class="tree__branch tree__branch_1"></div>
+          <div class="tree__branch tree__branch_2"></div>
+          <div class="tree__branch tree__branch_3"></div>
+          <div class="tree__branch tree__branch_4"></div>
+        </div>
+        <div class="tree__item tree__item_19">
+          <div class="tree__stamb"></div>
+          <div class="tree__branch tree__branch_1"></div>
+          <div class="tree__branch tree__branch_2"></div>
+          <div class="tree__branch tree__branch_3"></div>
+          <div class="tree__branch tree__branch_4"></div>
+        </div>
+        <div class="tree__item tree__item_20">
+          <div class="tree__stamb"></div>
+          <div class="tree__branch tree__branch_1"></div>
+          <div class="tree__branch tree__branch_2"></div>
+          <div class="tree__branch tree__branch_3"></div>
+          <div class="tree__branch tree__branch_4"></div>
+        </div>
+        <div class="tree__item tree__item_21">
+          <div class="tree__stamb"></div>
+          <div class="tree__branch tree__branch_1"></div>
+          <div class="tree__branch tree__branch_2"></div>
+          <div class="tree__branch tree__branch_3"></div>
+          <div class="tree__branch tree__branch_4"></div>
+        </div>
+        <div class="tree__item tree__item_22">
+          <div class="tree__stamb"></div>
+          <div class="tree__branch tree__branch_1"></div>
+          <div class="tree__branch tree__branch_2"></div>
+          <div class="tree__branch tree__branch_3"></div>
+          <div class="tree__branch tree__branch_4"></div>
+        </div>
+      </div>
+      <div class="hit-box">
+        <span class="red-circle">15</span>
+      </div>
+      <div class="point-box">
+        <span class="point-circle"></span>
+      </div>
+      <div class="cloud-wrapper">
+        <div class="cloud c1"></div>
+        <div class="cloud typeb c2"></div>
+        <div class="cloud c3"></div>
+        <div class="cloud typeb c4"></div>
+        <div class="cloud c5"></div>
+      </div>
+      <div class="stars-wrapper"></div>
+      <figure class="mountain k2"></figure>
+      <figure class="mountain everest"></figure>
+      <figure class="mountain blanc"></figure>
+      <div class="bottom"></div>
+      <span class="horserun">
+        🐎
+      </span>
+      <div class="coin">
+        <span>5</span>
+      </div>
+      <div id="object1">
+        <img src="./image/helicopter.png" class="plane" alt="plane">
+      </div>
+      <div id="object2">
+        <img src="./image/plane.png" class="plane" alt="helicopter">
+      </div>
+      <div class="cactus-wrapper">
+        <div class="cactus">
+          <div class="eye left"></div>
+          <div class="eye right"></div>
+          <div class="mouth"></div>
+        </div>
+        <div class="vase">
+        </div>
+      </div>
+      <div class="cactus-wrapper--second">
+        <div class="cactus">
+          <div class="eye left"></div>
+          <div class="eye right"></div>
+          <div class="mouth"></div>
+        </div>
+        <div class="vase">
+        </div>
+      </div>
+      <div id="piso"></div>
+    </div>
+  </div>
+  <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="./lib/jquerycollision1.0.2min/jquery-collision.js"></script>
+  <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="/dist/script.js"></script>
+</body>
+
+</html>

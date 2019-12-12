@@ -1,0 +1,363 @@
+#object1, #object2{ position: absolute; left: -200px; top: 0px;}
+// #object1 { background-color: #ff0000; z-index:10; height: 20px; width: 100px; }
+// #object2 { background-color: #000099; z-index:10; height: 20px; width: 100px;}
+
+
+.plane {
+  display:inline-block;
+  width:150px;
+  height:100px;
+}
+//-------------------------
+
+#piso{
+  position:absolute;
+  bottom:0;
+   left:0;
+  width:100%;
+  height:54px;
+  background-size: cover;
+  background-position:100% 0 ;
+  background-repeat: repeat-x;
+  animation:animate 15s linear infinite;
+  background: white url(https://image.ibb.co/kUH0YT/1hvUfeW.gif);
+}
+
+@keyframes animate {
+  from {
+    background-position:100% 0 ;
+   
+  }
+  to {
+    background-position:0 0;
+  }
+}
+
+//-----------
+
+
+
+
+$sky-top-color-day: #3E668A;
+$sky-bottom-color-day: #7292AD;
+$sky-top-color-night: #343545;
+$sky-bottom-color-night: #40447A;
+
+$vase-color: #AD693D;
+$cactus-color: #61783A;
+
+$time: 15s;
+
+@mixin transform($info) {
+  transform: $info;
+  -webkit-transform: $info;
+  -moz-transform: $info;
+  -ms-transform: $info;
+}
+
+@mixin gradient($info) {
+  background: linear-gradient($info);
+  background: -webkit-linear-gradient($info);
+  background: -moz-linear-gradient($info);
+  background: -ms-linear-gradient($info);
+}
+
+@mixin browsers($info) {
+  animation: $info;
+  -webkit-animation: $info;
+  -moz-animation: $info;
+  -ms-animation: $info;
+  -o-animation: $info;
+}
+
+@mixin animation($name) {
+  @keyframes #{$name} {
+    @content;
+  }
+  @-webkit-keyframes #{$name} {
+    @content;
+  }
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+  @-ms-keyframes #{$name} {
+    @content;
+  }
+}
+
+// body {
+//   background-color: #B5A99C;
+//   margin: 0;
+// }
+
+.content-wrapper {
+  height: 100vh;
+  width: 100vh;
+}
+
+.window {
+  border: 12px solid #ccc;
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  margin: auto;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  @include browsers(sunriset $time linear infinite);
+  
+}
+
+.cactus-wrapper--second{
+  width:27px;
+  height:75.5px;
+  z-index:6;
+   right: 590px;  
+  bottom:54px;
+   position: absolute; 
+}
+.cactus-wrapper {
+  
+ width:27px;
+ height:75.5px;
+ z-index:6;
+  right: 29px;  
+ bottom:54px;
+  position: absolute;
+}
+
+.vase {
+  cursor:pointer;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 20px solid $vase-color;
+  height: 25px;
+  //left: 65px;
+  position: absolute;
+  top: 55px;
+  width: 57px;
+  &:after {
+    border-left: 2px solid transparent;
+    border-right: 2px solid transparent;
+    border-top: 10px solid $vase-color - 17;
+    content: '';
+    height: 10px;
+    left: -5px;
+    position: absolute;
+    top: -29px;
+    width: 56px;
+  }
+  &:before {
+    background-color: $vase-color - #733E1D;
+    border-radius: 100%;
+    content: '';
+    height: 5px;
+    left: -5px;
+    position: absolute;
+    top: -33px;
+    width: 60px;
+  }
+}
+
+.cactus {
+  background-color: $cactus-color;
+  border-radius: 100% 70% 0 0;
+  box-shadow: inset -5px 1px 15px $cactus-color - 20;
+  height: 43px;
+  left: 14px;
+  position: absolute;
+  //top: 15px;
+  width: 25px;
+  &:after {
+    background-color: $cactus-color - 15;
+    border-radius: 50% 100% 10% 10%;
+    content: '';
+    height: 20px;
+    left: 31px;
+    position: absolute;
+    top: 12px;
+    width: 9px;
+    @include browsers(sayHey 2s linear infinite);
+  }
+  &:before {
+    background-color: $cactus-color - 15;
+    border-radius: 0 0 100% 0;
+    content: '';
+    height: 10px;
+    left: 23px;
+    position: absolute;
+    top: 30px;
+    width: 17px;
+    @include browsers(sayHeyBefore 2s linear infinite);
+  }
+}
+
+
+.eye {
+  background-color: #222;
+  border-radius: 100%;
+  height: 5px;
+  position: absolute;
+  top: 19px;
+  width: 5px;
+  &.left {
+    left: 6px;
+  }
+  &.right {
+    right: 6px;
+  }
+  &:after {
+    background-color: #f9f9f9;
+    border-radius: 100%;
+    content: '';
+    height: 1.25px;
+    left: 2px;
+    position: absolute;
+    top: 1px;
+    width: 2px;
+  }
+}
+
+.mouth {
+  border-bottom: 4px solid #853434;
+  border-radius: 100%;
+  height: 5px;
+  left: 8px;
+  position: absolute;
+  top: 23px;
+  width: 9px;
+}
+
+.stars{
+  background-color: #eee;
+  border-radius: 5px;
+  position: absolute;
+  @include browsers(showStar $time infinite);
+}
+
+@for $i from 1 through 50{
+  .s#{$i}{
+    $size: random(2) + px;
+    height: $size;
+    left: random(100) + 0%;
+    top: random(100) + 0%;
+    width: 1px;
+  }
+}
+
+@include animation(showStar) {
+  0% { opacity: 0; }
+  30% { opacity: 0; }
+  50% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.cloud-wrapper {
+  position: absolute;
+  top: 35px;
+}
+
+.cloud {
+  background-color: #eee;
+  border-radius: 100px;
+  height: 28px;
+  opacity: 0.75;
+  position: absolute;
+  width: 83.3px;
+  &.typeb {
+    &:after {
+      height: 23.3px;
+      right: 10px;
+      top: -13.3px;
+      width: 23.3px;
+    }
+    &:before {
+      height: 40px;
+      right: 12.7px;
+      top: -20px;
+      width: 40px;
+    }
+  }
+  &:after {
+    background-color: #eee;
+    border-radius: 100px;
+    content: '';
+    display: block;
+    height: 36.7px;
+    position: absolute;
+    right: 10px;
+    top: -22.7px;
+    width: 36.7px;
+    @include browsers(darkenClouds $time infinite);
+  }
+  &:before {
+    background-color: #eee;
+    border-radius: 100px;
+    content: '';
+    display: block;
+    height: 28.7px;
+    position: absolute;
+    left: 12.7px;
+    top: -14px;
+    width: 28.7px;
+    @include browsers(darkenClouds $time infinite);
+  }
+  @for $i from 1 through 5{  
+    &.c#{$i}{
+      $delay: random(150)*-1 + s;
+      $speed: random(30) + 30 + s;
+      top: random(5) + px;
+      @include browsers((walkTheCloud $speed $delay linear infinite, darkenClouds $time infinite));
+     }
+  }
+}
+
+@include animation(darkenClouds) {
+  0% { background-color: #eee; }
+  30% { background-color: #eee; }
+  50% { background-color: #888; }
+  80% { background-color: #888; }
+  100% { background-color: #eee; }
+}
+
+@include animation(walkTheCloud) {
+  from { left: 0; }
+  to { left: 500px; }
+}
+
+/* cactus animation */
+@include animation(sayHey) {
+  0% { @include transform(skew(0deg)); }
+  25% { @include transform(skew(-10deg)); }
+  75% { @include transform(skew(10deg)); }
+  100% { @include transform(skew(0deg)); }
+}
+
+@include animation(sayHeyBefore) {
+  0% { left: 23px; }
+  25% { left: 21.5px }
+  75% { left: 24.7px }
+  100% { left: 23px }
+}
+
+/* day/night animations */
+@include animation(sunriset) {
+  0% {
+    @include gradient(($sky-top-color-day, $sky-bottom-color-day));
+  }
+  15% {
+    @include gradient(($sky-top-color-day, $sky-bottom-color-day));
+  }
+  50% {
+    @include gradient(($sky-top-color-night, $sky-bottom-color-night)); 
+  }
+  65% {
+    @include gradient(($sky-top-color-night, $sky-bottom-color-night)); 
+  }
+  100% {
+    @include gradient(($sky-top-color-day, $sky-bottom-color-day));
+  }
+}
